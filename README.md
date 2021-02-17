@@ -38,7 +38,7 @@ Below is the Serializer block Diagram for 4-bit parallel data stream:
 
 This timing diagram shows parallel to serial conversion till input of LVDS(excluding LVDS output):
 
-![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/serdes_timing.jpg)
+![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/serializer_timing.png)
 
 
 
