@@ -55,7 +55,7 @@ Below is the block diagram of conventional CML latch circuit:
 
 
 ## Future Work
-* To specify CML Latch  and serializer specifications.
+* To specify CML Latch, Control Logic, PLL and serializer specifications.
 
 ## Author
 * Deepak verma
