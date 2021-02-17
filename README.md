@@ -1,8 +1,8 @@
 # serdes
 
-Serdes(Serializer/Deserializer) is a functional block  which provide high speed data transmission from one chip to another or within PCB. It provides data transmission over single line or differential pair in order to minimize number of input-output pins and interconnects .
+Serdes(Serializer/Deserializer) is a functional block  which provide high speed data transmission from one chip to another or within chip. It provides data transmission over single line or differential pair in order to minimize number of input-output pins and interconnects .
 
-Serializer converts low speed parallel stream of data into high speed serial  LVDS(Low volatge Differential Signaling) data stream and transmit the serial stream of data over a high speed connection to the receiver (Deserializer) which converts the serial data stream back to parallel stream of data.Inshort serializer functional block performs PISO(Parallel In Serial Out) and deserializer functional performs SIPO(Serial In Parallel Out) opreration.
+Serializer converts low speed parallel stream of data into high speed serial  LVDS(Low volatge Differential Signaling) data stream and transmit the serial stream of data over a high speed connection to the receiver (Deserializer) which converts the serial data stream back to parallel stream of data.Inshort serializer functional block performs PISO(Parallel In Serial Out) and deserializer functional block performs SIPO(Serial In Parallel Out) operation.
 
 
 # Table of Contents  
@@ -26,10 +26,13 @@ The serializer functional block has following internal blocks:
     <dd> 3.Phase locked loop </dd>
     <dd> 4.LVDS output driver </dd>
 </dl>
+Below is the Serializer block Diagram for 4-bit parallel data stream:
+
+![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/Serializer_Block_Diagram.png)
 
 ## Input CML latch 
-A CML(current mode logic) latch consists of an input data tracking stage(using MOSFETS M1 and M2) which sense and track data variation and a regenerative cross-coupled pair (using MOSFETS M3amd M4) used to store the data.The track and latch modes are determined by  the clock signal inputs to second differential pair(MOSFET M5 and M6).
-When CLK is HIGH ,the tail current flows completely through the tracking circuit, thereby allowing Vout to track Vin. In thelatch-mode, when the signal CLK goes low, the tracking stage is disabled, whereas the latch pair is enabled storing the logic state at the output.The output of latch remains same till CLK is low.
+A CML(current mode logic) latch consists of an input data tracking stage(using MOSFETS M1 and M2) which sense and track data variation and a regenerative cross-coupled pair (using MOSFETS M3amd M4) used to store the data.The track and latch modes are determined by the clock signal inputs to second differential pair(MOSFET M5 and M6).
+When CLK is HIGH ,the tail current flows completely through the tracking circuit, thereby allowing Vout to track Vin. In the latch-mode, when the signal CLK goes low, the tracking stage is disabled, whereas the latch pair is enabled storing the logic state at the output.The output of latch remains same till CLK is low.
 
 * Block Diagram
 
@@ -46,18 +49,6 @@ When CLK is HIGH ,the tail current flows completely through the tracking circuit
 ## Waveforms:
 
 
-
-**1bit_sram_write :**
-
-**Simulation Waveform :**
-<dl>
-  <dd> Type below command in Postlayout directory </dd>
-</dl>
- 
-```
-$  ngspice 1bit_sram_write.spice
-```
-![](https://github.com/Deepak42074/vsdsram_sky130/blob/main/Simulation_Waveform/Postlayout/1bit_sram_write.png)
 
 # Future Work
 * 
