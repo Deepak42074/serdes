@@ -47,10 +47,6 @@ Below is the block diagram of conventional CML latch circuit:
 
 
 
-
-
-
-
 ## Waveforms:
 
 
