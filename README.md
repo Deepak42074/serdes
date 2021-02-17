@@ -28,14 +28,16 @@ The serializer functional block has following internal blocks:
 </dl>
 Below is the Serializer block Diagram for 4-bit parallel data stream:
 
+
 ![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/Serializer_Block_Diagram.png)
 
 ## Input CML latch 
 A CML(current mode logic) latch consists of an input data tracking stage(using MOSFETS M1 and M2) which sense and track data variation and a regenerative cross-coupled pair (using MOSFETS M3amd M4) used to store the data.The track and latch modes are determined by the clock signal inputs to second differential pair(MOSFET M5 and M6).
 When CLK is HIGH ,the tail current flows completely through the tracking circuit, thereby allowing Vout to track Vin. In the latch-mode, when the signal CLK goes low, the tracking stage is disabled, whereas the latch pair is enabled storing the logic state at the output.The output of latch remains same till CLK is low.
 
-* Block Diagram
+Below is the block diagram of conventional CML latch circuit:
 
+![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/Conventional_CML_Latch.png)
 
 
 
