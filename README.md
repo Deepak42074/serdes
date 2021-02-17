@@ -14,7 +14,9 @@ Serializer converts low speed parallel stream of data into high speed serial  LV
 - [Contact Information](#Contact-information) 
 
 ## Serdes Block Diagram:
-The bwlow serdes diagram is taken from Maxim Integrated MAX9205 10-bit bus LVDS serilaizer:
+The below serdes diagram is taken from Maxim Integrated MAX9205 10-bit bus LVDS serilaizer:
+
+![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/serdes.png)
 
 
 ## Serializer:
@@ -32,7 +34,12 @@ Below is the Serializer block Diagram for 4-bit parallel data stream:
 
 ![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/Serializer_Block_Diagram.png)
 
-## Serializer Specification:
+## Serializer Timing Diagram:
+
+This timing diagram shows parallel to serial conversion till input of LVDS(excluding LVDS output):
+
+![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/serdes_timing.jpg)
+
 
 
 ## Input CML latch 
@@ -44,12 +51,9 @@ Below is the block diagram of conventional CML latch circuit:
 
 ![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/Conventional_CML_Latch.png)
 
+## CML latch Timing Diagram:
 
-
-
-
-
-## Timing Diagram:
+![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/Latch_timing.jpg)
 
 
 
