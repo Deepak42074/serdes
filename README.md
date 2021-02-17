@@ -8,6 +8,9 @@ Serializer converts low speed parallel stream of data into high speed serial  LV
 # Table of Contents  
 - [Serdes Block Diagram](#Serdes-Block-Diagram)  
 - [Serializer](#Serializer)  
+- [Serializer Timing Diagram](#Serializer-Timing-Diagram)
+- [Input CML latch ](#Input-CML-latch)
+- [CML latch Timing Diagram](#CML-latch-Timing-Diagram)
 - [Future Work](#future-work) 
 - [Author](#Author)
 - [Acknowledgements](#Acknowledgements)  
@@ -39,7 +42,6 @@ Below is the Serializer block Diagram for 4-bit parallel data stream:
 This timing diagram shows parallel to serial conversion till input of LVDS(excluding LVDS output):
 
 ![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/serializer_timing.png)
-
 
 
 ## Input CML latch 
