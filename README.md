@@ -17,7 +17,7 @@ Serializer converts low speed parallel stream of data into high speed serial  LV
 - [Contact Information](#Contact-information) 
 
 ## Serdes Block Diagram:
-The below serdes diagram is taken from Maxim Integrated MAX9205 10-bit bus LVDS serilaizer:
+The below serdes diagram is taken from Maxim Integrated MAX9205 10-bit bus LVDS serializer:
 
 ![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/serdes.png)
 
