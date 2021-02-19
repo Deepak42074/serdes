@@ -16,9 +16,13 @@ Serializer converts low speed parallel stream of data into high speed serial  LV
 - [Acknowledgements](#Acknowledgements)  
 - [Contact Information](#Contact-information) 
 
+##Serdes Block Diagram
+Basic block diagram of serdes is shown below:
+
+![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/serdes.png)
 
 ## Serializer:
-The main function of serializer is to convert input parallel data stream into serial data stream which can be transmitted at high speed electrical interface.
+The main function of serializer is to transform LVTTL/LVCMOS parallel input data stream into serial hogh speed LVDS data stream which can be transmitted at high speed electrical interface.
 The serializer functional block has following internal blocks:
 
 <dl>
@@ -27,6 +31,7 @@ The serializer functional block has following internal blocks:
     <dd> 3. Phase locked loop </dd>
     <dd> 4. LVDS output driver </dd>
 </dl>
+
 Below is the Serializer block Diagram for 4-bit parallel data stream:
 
 
@@ -52,7 +57,11 @@ Below is the block diagram of conventional CML latch circuit:
 
 ![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/Latch_timing.jpg)
 
-
+## PISO Register:
+Parallel-in serial-out (PISO ) shift register loads data parllely in all registers and shift serially on clock by clock basis.Parallel data is loaded in D-FF and it is shifted serially with the hwlpp of 2:1 MUX which is controlled by shift/load bar line.When shift/load bar is "0" data is loaded parallely in all registers and when shift/load bar is "1"
+data is shifted serially from LSB to MSB and serial output is taken at MSB.
+Below diagram shows parallel to serial conversion diagram of 4-bit parallel data.
+![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/PISO.png)
 
 ## Future Work
 * To specify CML Latch, Control Logic, PLL and serializer specifications.
