@@ -11,6 +11,9 @@ Serializer converts low speed parallel stream of data into high speed serial  LV
 - [Serializer Timing Diagram](#Serializer-Timing-Diagram)
 - [Input CML latch ](#Input-CML-latch)
 - [CML latch Timing Diagram](#CML-latch-Timing-Diagram)
+- [PISO Register](#PISO-Register)
+- [Phase Locked Loop](#Phase-Locked-Loop)
+- [LVDS driver](#LVDS-driver)
 - [Future Work](#future-work) 
 - [Author](#Author)
 - [Acknowledgements](#Acknowledgements)  
@@ -57,22 +60,23 @@ Below is the block diagram of conventional CML latch circuit:
 
 ![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/CML_latch_timing.png)
 
-## PISO Register:
+## PISO Register
 Parallel-in serial-out (PISO ) shift register loads data parllely in all registers and shift serially on clock by clock basis.Parallel data is loaded in D-FF and it is shifted serially with the hwlpp of 2:1 MUX which is controlled by shift/load bar line.When shift/load bar is "0" data is loaded parallely in all registers and when shift/load bar is "1"
 data is shifted serially from LSB to MSB and serial output is taken at MSB.
 Below diagram shows parallel to serial conversion diagram of 4-bit parallel data.
 
 ![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/PISO.png)
 
-## PLL(Phase Locked Loop)
+## Phase Locked Loop
 The phase locked loop take in a signal to which it locks and can then output this signal from its own internal VCO.It is a feedback mechanism by which phase error between a input and locally generated signal is minimized.Here PLL is used to generate high frequency clock output for given input clock.Here PLL ia locked at the input reference clock. 
 
-##LVDS
+##LVDS driver
 LVDS transmitters are designed for high speed applications requiring minimum power consumption,space and noise.It accepts LVTTL/LVCMOS input and translates them to low voltage differential output minimizing electomagnetic interference and power dissipation.The differential output tansition depends on output load capacitance and load resistance of transmission line.
 
 Below diagram shows LVDS differential output and corresponding waveforms
 
 ![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/LVDS.png)
+
 LVDS Propagation delay and transition time waveforms
 ![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/LVDS_waveform.png)
 
