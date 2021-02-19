@@ -1,4 +1,4 @@
-# Serdes
+ # Serdes
 
 Serdes(Serializer/Deserializer) is a functional block  which provide high speed data transmission from one chip to another or within chip. It provides data transmission over single line or differential pair in order to minimize number of input-output pins and interconnects .
 
@@ -64,8 +64,22 @@ Below diagram shows parallel to serial conversion diagram of 4-bit parallel data
 
 ![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/PISO.png)
 
+## PLL(Phase Locked Loop)
+The phase locked loop take in a signal to which it locks and can then output this signal from its own internal VCO.It is a feedback mechanism by which phase error between a input and locally generated signal is minimized.Here PLL is used to generate high frequency clock output for given input clock.Here PLL ia locked at the input reference clock. 
+
+##LVDS
+LVDS transmitters are designed for high speed applications requiring minimum power consumption,space and noise.It accepts LVTTL/LVCMOS input and translates them to low voltage differential output minimizing electomagnetic interference and power dissipation.The differential output tansition depends on output load capacitance and load resistance of transmission line.
+
+Below diagram shows LVDS differential output and corresponding waveforms
+
+![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/LVDS.png)
+
+![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/LVDS_waveform.png)
+
+
+
 ## Future Work
-* To specify CML Latch, Control Logic, PLL and serializer specifications.
+* To specify CML Latch, Control Logic, PLL,LVDS  and complete serializer specifications.
 
 ## Author
 * Deepak verma
