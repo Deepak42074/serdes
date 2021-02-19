@@ -61,6 +61,7 @@ Below is the block diagram of conventional CML latch circuit:
 Parallel-in serial-out (PISO ) shift register loads data parllely in all registers and shift serially on clock by clock basis.Parallel data is loaded in D-FF and it is shifted serially with the hwlpp of 2:1 MUX which is controlled by shift/load bar line.When shift/load bar is "0" data is loaded parallely in all registers and when shift/load bar is "1"
 data is shifted serially from LSB to MSB and serial output is taken at MSB.
 Below diagram shows parallel to serial conversion diagram of 4-bit parallel data.
+
 ![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/PISO.png)
 
 ## Future Work
