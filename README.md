@@ -73,7 +73,7 @@ The phase locked loop take in a signal to which it locks and can then output thi
 ## LVDS driver
 LVDS transmitters are designed for high speed applications requiring minimum power consumption,space and noise.It accepts LVTTL/LVCMOS input and translates them to low voltage differential output minimizing electomagnetic interference and power dissipation.The differential output tansition depends on output load capacitance and load resistance of transmission line.
 
-Below diagram shows LVDS differential output and corresponding waveforms
+Below diagram shows LVDS differential output and corresponding waveform.
 
 ![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/LVDS.png)
 
