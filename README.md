@@ -85,7 +85,7 @@ LVDS transmitters are designed for high speed applications requiring minimum pow
 
 Below diagram shows LVDS differential output and corresponding waveform:
 
-![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/LVDS.png)
+![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/LVDS_output.png)
 
 LVDS Propagation delay and transition time waveform:
 ![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/LVDS_waveform.png)
