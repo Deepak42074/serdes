@@ -67,7 +67,7 @@ CML latch input ,CLK and output specs:
 
 Input signal setup and hold time :
 
-![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/input_signal_transition.png)
+![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/input_signal.png)
 
 
 ## PISO Register
