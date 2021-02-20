@@ -25,7 +25,7 @@ Basic block diagram of serdes is shown below:
 ![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/serdes.png)
 
 ## Serializer:
-The main function of serializer is to transform LVTTL/LVCMOS parallel input data stream into serial hogh speed LVDS data stream which can be transmitted at high speed electrical interface.
+The main function of serializer is to transform LVTTL/LVCMOS parallel input data stream into serial high speed LVDS data stream which can be transmitted at high speed electrical interface.
 The serializer functional block has following internal blocks:
 
 <dl>
@@ -35,7 +35,7 @@ The serializer functional block has following internal blocks:
     <dd> 4. LVDS output driver </dd>
 </dl>
 
-Below is the Serializer block Diagram for 4-bit parallel data stream:
+The  block Diagram of Serializerfor 4-bit parallel data stream is shown below:
 
 
 ![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/Serializer_Block_Diagram.png)
@@ -52,7 +52,7 @@ A CML(Current Mode Logic) latch consists of an input data tracking stage(using M
 The sampling/tracking pair works as a CML buffer and when it is activated by the clock "HIGH" signal , it tracks the input data and transfers it to the outputs. This is known as the sampling mode of the latch. The hold pair becomes active when  the clock polarity changes to " LOW" . The cross-coupled transistors in the latch pair form a regenerative positive feedback structure which retains the output data at the current state.
 <!-- When CLK is HIGH ,the tail current flows completely through the tracking circuit, thereby allowing Vout to track Vin(Tracking pair works as CML buffer. In the latch-mode, when the signal CLK goes low, the tracking stage is disabled, whereas the latch pair is enabled storing the logic state at the output.The output of latch remains same till CLK is low.-->
 
-Below is the block diagram of conventional CML latch circuit:
+The block diagram of conventional CML latch circuit is shown below :
 
 ![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/Conventional_CML_Latch.png)
 
@@ -68,16 +68,16 @@ Below diagram shows parallel to serial conversion diagram of 4-bit parallel data
 ![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/PISO.png)
 
 ## Phase Locked Loop
-The phase locked loop take in a signal to which it locks and can then output this signal from its own internal VCO.PLL is locked at the input reference clock.It is a feedback mechanism by which phase error between a input and locally generated signal is minimized. Here PLL is used to generate high frequency clock output for given input clock. 
+The phase locked loop take in a signal to which it locks and can then output this signal from its own internal VCO.PLL is locked at the input reference clock.It is a feedback mechanism by which phase error between a input and locally generated signal is minimized. Here PLL is used to generate high frequency clock output for given input clock. The frequency of output clock to PLL which will be transmitted is same as frequency of input clock.
 
 ## LVDS driver
-LVDS transmitters are designed for high speed applications requiring minimum power consumption,space and noise.It accepts LVTTL/LVCMOS input and translates them to low voltage differential output minimizing electomagnetic interference and power dissipation.The differential output tansition depends on output load capacitance and load resistance of transmission line.
+LVDS transmitters are designed for high speed applications requiring minimum power consumption,space and noise.It accepts LVTTL/LVCMOS input and translates them to low voltage differential output minimizing electomagnetic interference and power dissipation.The differential output tansition depends on output load capacitance (CL) and load resistance(RL)  matched to transmission line.
 
-Below diagram shows LVDS differential output and corresponding waveform.
+Below diagram shows LVDS differential output and corresponding waveform:
 
 ![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/LVDS.png)
 
-LVDS Propagation delay and transition time waveforms
+LVDS Propagation delay and transition time waveform:
 ![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/LVDS_waveform.png)
 
 
