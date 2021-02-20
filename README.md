@@ -56,9 +56,16 @@ The block diagram of conventional CML latch circuit is shown below :
 
 ![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/Conventional_CML_Latch.png)
 
-## CML latch Timing Diagram:
+## CML latch Timing Diagram
 
 ![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/CML_latch_timing.png)
+
+## CML Latch specification
+CML latch input ,CLK and output specs:
+![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/CML_latch_specs.png)
+
+Input signal setup and hold time :
+![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/input_signal_transition.png)
 
 ## PISO Register
 Parallel-in serial-out (PISO ) shift register loads data parllely in all registers and shift serially on clock by clock basis.Parallel data is loaded in D-FF and it is shifted serially with the hwlpp of 2:1 MUX which is controlled by shift/load bar line.When shift/load bar is "0" data is loaded parallely in all registers and when shift/load bar is "1"
