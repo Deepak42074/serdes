@@ -61,7 +61,7 @@ The block diagram of conventional CML latch circuit is shown below :
 ![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/CML_latch_timing.png)
 
 ## CML Latch specification
-CML latch input ,CLK and output specs:
+CML latch input ,clock and output specs:
 
 ![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/CML_latch_specs.png)
 
