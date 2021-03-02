@@ -49,7 +49,8 @@ This timing diagram shows parallel to serial conversion till input of LVDS(exclu
 
 ## Input CML latch 
 A CML(Current Mode Logic) latch consists of an input data tracking stage(using MOSFETS M1 and M2) which sense and track data variation and a regenerative cross-coupled pair (using MOSFETS M3amd M4) used to store the data.The track and latch modes are determined by the clock signal inputs to second differential pair(MOSFET M5 and M6).
-The sampling/tracking pair works as a CML buffer and when it is activated by the clock "HIGH" signal , it tracks the input data and transfers it to the outputs. This is known as the sampling mode of the latch. The hold pair becomes active when  the clock polarity changes to " LOW" . The cross-coupled transistors in the latch pair form a regenerative positive feedback structure which retains the output data at the current state.
+
+The sampling/tracking pair works as a CML buffer and when it is activated by the clock "HIGH" signal , it tracks the input data and transfers it to the outputs. This is known as the sampling mode of the latch. The hold pair becomes active when  the clock polarity changes to "LOW" . The cross-coupled transistors in the latch pair form a regenerative positive feedback structure which retains the output data at the current state.
 <!-- When CLK is HIGH ,the tail current flows completely through the tracking circuit, thereby allowing Vout to track Vin(Tracking pair works as CML buffer. In the latch-mode, when the signal CLK goes low, the tracking stage is disabled, whereas the latch pair is enabled storing the logic state at the output.The output of latch remains same till CLK is low.-->
 
 The block diagram of conventional CML latch circuit is shown below :
@@ -63,27 +64,30 @@ The block diagram of conventional CML latch circuit is shown below :
 ## CML Latch specification
 CML latch input ,clock and output specs:
 
-![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/CML_latch_spec.png)
-
 Input signal setup and hold time :
 
 ![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/input_signal.png)
+
+CML latch specifications:
+
+![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/CML_latch_spec.png)
+
 
 
 ## PISO Register
 Parallel-in serial-out (PISO ) shift register loads data parllely in all registers and shift serially on clock by clock basis.Parallel data is loaded in D-FF and it is shifted serially with the hwlpp of 2:1 MUX which is controlled by shift/load bar line.When shift/load bar is "0" data is loaded parallely in all registers and when shift/load bar is "1"
 data is shifted serially from LSB to MSB and serial output is taken at MSB.
+
 Below diagram shows parallel to serial conversion diagram of 4-bit parallel data.
 
 ![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/PISO.png)
 
-Here the clock, CLK is 4 times the input reference clk:
-                     CLK(to input of PISO Register) = input Reference clk * No. of Parallel data input lines. 
-                     
-So the output of the PISO register have output frequency of 320 MHz(4*80 MHz).
-
-
-                
+The parallel inputs(D0, D1, D2, D3) to the PISO circuit are the output of CML latch and the clock input to the D-flipflops, CLK is 4 times the input reference clk:                     
+```
+CLK(to input of PISO Register) = input Reference clk * No. of Parallel data input lines. 
+```                   
+So, **the output of the PISO register have output frequency of 320 MHz(4*80 MHz)**.
+   
     
 ## Phase Locked Loop
 The phase locked loop take in a signal to which it locks and can then output this signal from its own internal VCO.PLL is locked at the input reference clock.It is a feedback mechanism by which phase error between a input and locally generated signal is minimized. Here PLL is used to generate high frequency clock output for given input clock. The frequency of output clock to PLL which will be transmitted is same as the frequency of input clock because the same reference CLK is used by deserializer for synchronization.
