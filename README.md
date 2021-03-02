@@ -77,6 +77,12 @@ Below diagram shows parallel to serial conversion diagram of 4-bit parallel data
 
 ![](https://github.com/Deepak42074/serdes/blob/main/Diagrams/PISO.png)
 
+Here the clock, CLK is 4 times the input reference clk:
+                     CLK(to input of PISO Register) = input Reference clk * No. of Parallel data input lines 
+So the output of the PISO register have output frequency of 320 MHz(4*80 MHz).
+
+                
+    
 ## Phase Locked Loop
 The phase locked loop take in a signal to which it locks and can then output this signal from its own internal VCO.PLL is locked at the input reference clock.It is a feedback mechanism by which phase error between a input and locally generated signal is minimized. Here PLL is used to generate high frequency clock output for given input clock. The frequency of output clock to PLL which will be transmitted is same as frequency of input clock.
 
